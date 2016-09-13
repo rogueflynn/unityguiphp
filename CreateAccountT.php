@@ -6,13 +6,13 @@
 	//PHP Only
 	$Hostname = "localhost";
 	$DBName = "gameaccounts";
-	$User = "vic";
-	$PasswordP = "emily";
+	$User = "root";
+	$PasswordP = "";
 
 	$conn = new mysqli($Hostname, $User, $PasswordP, $DBName);
 	
 	if($conn->connect_error) {
-		die("Connection failed: " . $conn->conect_error);
+		die("Connection failed: " . $conn->connect_error);
 	}
 
 	if(!$Email || !$Password) {
